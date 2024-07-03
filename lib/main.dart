@@ -18,28 +18,50 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               Text('Ubicaciones'),
-              TitleSection(name: 'Oeschinen Lake Campground', location: 'Kandersteg, Switzerland'),
+              TitleSection(
+                  name: 'Oeschinen Lake Campground',
+                  location: 'Kandersteg, Switzerland'),
               ImageSection(image: 'images/lago.jpeg'),
               ButtonSection(),
-              TextSection(description: 'Estamos en Suiza'),
+              TextSection(
+                  description:
+                      'Ubicado en el corazón de los Alpes suizos, el campamento Oeschinen Lake ofrece vistas impresionantes y actividades al aire libre como senderismo, pesca y paseos en bote.'),
               TitleSection(name: 'El Panecillo', location: 'Quito, Ecuador'),
+              ImageSection(image: 'images/Panecillo.jpeg'),
               ButtonSection(),
-              TextSection(description: 'Descripcion del Panecillo'),
+              TextSection(
+                  description:
+                      'El Panecillo es un icono de Quito, una colina con una estatua gigante de la Virgen de Quito que ofrece vistas panorámicas de la ciudad.'),
               TitleSection(name: 'La Carolina', location: 'Quito, Ecuador'),
+              ImageSection(image: 'images/carolina.jpeg'),
               ButtonSection(),
-              TextSection(description: 'Descripcion de la Carolina'),
-              TitleSection(name: 'La Ronda', location: 'Quito, Ecuador'),              
+              TextSection(
+                  description:
+                      'Parque La Carolina es un amplio espacio verde en el centro de Quito, perfecto para actividades recreativas, deportes y eventos culturales.'),
+              TitleSection(name: 'La Ronda', location: 'Quito, Ecuador'),
+              ImageSection(image: 'images/RONDA.jpeg'),
               ButtonSection(),
-              TextSection(description: 'Descripcion de la Ronda'),
-              TitleSection(name: 'San Fransisco', location: 'Quito, Ecuador'),
+              TextSection(
+                  description:
+                      'La Ronda es una calle histórica en el centro de Quito, conocida por su ambiente bohemio, tiendas de artesanías, y restaurantes tradicionales.'),
+              TitleSection(name: 'San Francisco', location: 'Quito, Ecuador'),
+              ImageSection(image: 'images/fran.jpeg'),
               ButtonSection(),
-              TextSection(description: 'Descripcion de San Fransisco'),
+              TextSection(
+                  description:
+                      'La Plaza de San Francisco es una de las plazas más antiguas y emblemáticas de Quito, rodeada de arquitectura colonial y la impresionante Iglesia de San Francisco.'),
               TitleSection(name: 'Plaza Grande', location: 'Quito, Ecuador'),
+              ImageSection(image: 'images/plaza.jpeg'),
               ButtonSection(),
-              TextSection(description: 'Descripcion de la Plaza Grande'),
-              TitleSection(name: 'Guapulo', location: 'Quito, Ecuador'),
+              TextSection(
+                  description:
+                      'La Plaza Grande, también conocida como Plaza de la Independencia, es el corazón político y cultural de Quito, rodeada de importantes edificios históricos.'),
+              TitleSection(name: 'Guápulo', location: 'Quito, Ecuador'),
+              ImageSection(image: 'images/guapulo.png'),
               ButtonSection(),
-              TextSection(description: 'Descripcion de Guapulo'),
+              TextSection(
+                  description:
+                      'Guápulo es un pintoresco barrio colonial en Quito, conocido por su iglesia histórica, estrechas calles empedradas y vistas espectaculares del valle.'),
             ],
           ),
         ),
@@ -182,6 +204,7 @@ class TextSection extends StatelessWidget {
     );
   }
 }
+
 class ImageSection extends StatelessWidget {
   const ImageSection({super.key, required this.image});
 
@@ -192,7 +215,7 @@ class ImageSection extends StatelessWidget {
     return Image.asset(
       image,
       width: 600,
-      height: 240,
+      height: 400,
       fit: BoxFit.cover,
     );
   }
